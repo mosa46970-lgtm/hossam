@@ -35,7 +35,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero-image">
         <div className="profile-ring">
-          <img src="/profile.jpg" alt="Hossam Yasser" className="profile-img" />
+          <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Hossam Yasser" className="profile-img" />
 
           <div className="floating-icons">
             <div className="icon-box icon-globe">

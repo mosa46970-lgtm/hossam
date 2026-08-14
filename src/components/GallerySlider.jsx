@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 
 const CATEGORIES = ['All', 'BIM Parts (3D Elements)', 'BIM Infrastructure Sheets', 'Hydraulic & Network Simulations'];
 
-const ALL_SLIDES = [
+const BASE = import.meta.env.BASE_URL;
+const withBase = (path) => (path && path.startsWith('/') ? BASE + path.slice(1) : path);
+
+const RAW_SLIDES = [
   // ─── BIM PARTS (1 to 10 + key ones) ───
   {
     id: 'part-1',
@@ -333,6 +336,11 @@ const ALL_SLIDES = [
     details: [{ label: 'Pressure Class', value: 'PN16 Constant Pressure' }, { label: 'Pipe Spec', value: 'HDPE PE100 / Ductile Iron' }, { label: 'Color Code', value: 'Blue Potable Marking' }],
   },
 ];
+
+const ALL_SLIDES = RAW_SLIDES.map((slide) => ({
+  ...slide,
+  image: withBase(slide.image),
+}));
 
 export default function GallerySlider() {
   const [activeCategory, setActiveCategory] = useState('All');

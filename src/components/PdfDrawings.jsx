@@ -2,7 +2,10 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 const CATEGORIES = ['All', 'Stormwater & Profiles', 'Water Networks', 'Sewage Networks', 'Fire Protection', 'Irrigation'];
 
-const ALL_PDF_DOCUMENTS = [
+const BASE = import.meta.env.BASE_URL;
+const withBase = (path) => (path && path.startsWith('/') ? BASE + path.slice(1) : path);
+
+const RAW_PDF_DOCUMENTS = [
   // ─── Stormwater ───
   {
     id: 'AL-C-SW-120', title: 'Storm Water Drainage Master Plan - Area 1',
@@ -180,6 +183,12 @@ const ALL_PDF_DOCUMENTS = [
     badgeColor: 'green',
   },
 ];
+
+const ALL_PDF_DOCUMENTS = RAW_PDF_DOCUMENTS.map((doc) => ({
+  ...doc,
+  file: withBase(doc.file),
+  previewImg: withBase(doc.previewImg),
+}));
 
 /* ── Lazy-load image with IntersectionObserver ── */
 function LazyImage({ src, alt, className, onClick }) {

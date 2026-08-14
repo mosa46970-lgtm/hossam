@@ -1,12 +1,14 @@
 import { useState } from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+
 const PROJECTS_DATA = [
   {
     color: 'purple',
     title: 'Integrated Multi-Discipline BIM Model',
     description:
       'Full composite 3D BIM model integrating water distribution, gravity sewage, storm drainage, fire protection, and electrical duct banks with complete clash detection and resolution.',
-    image: '/composite.png',
+    image: `${BASE}composite.png`,
     tags: ['Revit BIM', 'Navisworks', 'LOD 350', 'Infrastructure'],
   },
   {
@@ -14,7 +16,7 @@ const PROJECTS_DATA = [
     title: 'Water Distribution & Supply Network',
     description:
       'Hydraulic design and 3D modeling of a pressurized water network for a mega residential compound. Pressure zones, pipe scheduling, and pumping station simulation.',
-    image: '/bim1.png',
+    image: `${BASE}bim1.png`,
     tags: ['WaterCAD', 'AutoCAD Civil 3D', 'Revit MEP', 'Hydraulics'],
   },
   {
@@ -22,7 +24,7 @@ const PROJECTS_DATA = [
     title: 'Gravity Sewage & Drainage System',
     description:
       'Comprehensive gravity sewer network design featuring pipe profile alignments, invert levels, manhole schedules, and full 3D underground utility coordination.',
-    image: '/sewage.png',
+    image: `${BASE}sewage.png`,
     tags: ['SewerCAD', 'Gravity Networks', 'Civil 3D', 'Manholes'],
   },
   {
@@ -30,7 +32,7 @@ const PROJECTS_DATA = [
     title: 'Fire Fighting & Storm Water Networks',
     description:
       'Underground fire hydrant network designed per NFPA standards, paired with rational method storm drainage and retention basin modeling.',
-    image: '/storm.png',
+    image: `${BASE}storm.png`,
     tags: ['NFPA Codes', 'StormCAD', 'Fire Hydrants', 'Revit'],
   },
   {
@@ -38,7 +40,7 @@ const PROJECTS_DATA = [
     title: 'Smart Landscape Irrigation Network',
     description:
       'Pressurized irrigation distribution model with solenoid valve stations, filtration units, and drip/sprinkler flow management for green landscape zones.',
-    image: '/irrigation.png',
+    image: `${BASE}irrigation.png`,
     tags: ['WaterGEMS', 'Irrigation Design', 'Revit MEP'],
   },
   {
@@ -46,7 +48,7 @@ const PROJECTS_DATA = [
     title: 'LV & MV Electrical Duct Infrastructure',
     description:
       'Low & Medium Voltage power cable routing, concrete duct banks, road crossing encasements, and transformer substation feed corridor modeling.',
-    image: '/lv_model.png',
+    image: `${BASE}lv_model.png`,
     tags: ['Electrical MEP', 'Duct Banks', 'Revit', 'Navisworks'],
   },
 ];

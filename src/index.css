@@ -691,23 +691,23 @@ header.scrolled {
     background: #000;
     color: #fff;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 60px;
-    padding: 80px 7%;
+    justify-content: center;
+    padding: 100px 7%;
 }
 
 .about__content {
-    flex: 1;
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .about__title {
     font-size: 50px;
     font-weight: bold;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .about__text {

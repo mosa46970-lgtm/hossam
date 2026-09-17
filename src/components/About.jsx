@@ -17,28 +17,6 @@ export default function About() {
           </p>
         </div>
       </div>
-
-      <div className="about__stats">
-        <div className="stat-card">
-          <p className="stat-card__number">25+</p>
-          <h3 className="stat-card__title">Projects Completed</h3>
-        </div>
-
-        <div className="stat-card">
-          <p className="stat-card__number">5+</p>
-          <h3 className="stat-card__title">Years Experience</h3>
-        </div>
-
-        <div className="stat-card">
-          <p className="stat-card__number">12+</p>
-          <h3 className="stat-card__title">Software Tools</h3>
-        </div>
-
-        <div className="stat-card">
-          <p className="stat-card__number">10+</p>
-          <h3 className="stat-card__title">Certificates</h3>
-        </div>
-      </div>
     </section>
   );
 }

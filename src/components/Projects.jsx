@@ -9,7 +9,7 @@ const PROJECTS_DATA = [
     description:
       'Full composite 3D BIM model integrating water distribution, gravity sewage, storm drainage, fire protection, and electrical duct banks with complete clash detection and resolution.',
     image: `${BASE}composite.png`,
-    tags: ['Revit BIM', 'Navisworks', 'LOD 350', 'Infrastructure'],
+    tags: ['Revit BIM', 'Navisworks', 'LOD 400', 'Infrastructure'],
   },
   {
     color: 'green',

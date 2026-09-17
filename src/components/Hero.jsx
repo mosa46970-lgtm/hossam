@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 const WORDS = [
-  'Civil Engineer',
-  'Infrastructure Designer',
+  'Infrastructure Design Engineer',
   'BIM Specialist',
-  'Water Networks Engineer',
-  'Hydraulic Modeling Expert'
+  'Civil 3D Modeler',
+  'Utility Network Designer',
+  'Hydraulic Infrastructure Expert'
 ];
 
 export default function Hero() {
@@ -86,9 +86,9 @@ export default function Hero() {
         </h2>
 
         <p className="hero-description">
-          Civil Engineer specializing in Infrastructure Design &amp; BIM Modeling.
-          Designing smart water distribution, sewage, and stormwater networks
-          merging computational engineering with high-precision 3D modeling.
+          Infrastructure Design &amp; BIM Engineer specializing in utility network design,
+          Civil 3D modeling, BIM coordination, and construction-ready shop drawings.
+          Passionate about AI-assisted engineering workflows.
         </p>
 
         <div className="hero-buttons">

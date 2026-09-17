@@ -46,18 +46,18 @@ export default function Header() {
         </span>
         <span className="eng-logo-text">
           <span className="eng-logo-name">Hossam</span>
-          <span className="eng-logo-title">Civil Engineer</span>
+          <span className="eng-logo-title">Infrastructure & BIM Engineer</span>
         </span>
       </a>
 
       <nav>
         <ul className={`nav-links ${menuActive ? 'active' : ''}`}>
           <li><a href="#home" className="active" onClick={() => setMenuActive(false)}>Home</a></li>
+          <li><a href="#videos" onClick={() => setMenuActive(false)}>Videos</a></li>
           <li><a href="#about" onClick={() => setMenuActive(false)}>About</a></li>
           <li><a href="#skills" onClick={() => setMenuActive(false)}>Skills</a></li>
           <li><a href="#experience" onClick={() => setMenuActive(false)}>Experience</a></li>
           <li><a href="#projects" onClick={() => setMenuActive(false)}>Projects</a></li>
-          <li><a href="#drawings" onClick={() => setMenuActive(false)}>Drawings (PDF)</a></li>
           <li><a href="#gallery" onClick={() => setMenuActive(false)}>Gallery</a></li>
           <li><a href="#services" onClick={() => setMenuActive(false)}>Services</a></li>
           <li><a href="#contact" onClick={() => setMenuActive(false)}>Contact</a></li>

@@ -6,14 +6,14 @@ export default function About() {
 
         <div className="about__text">
           <p className="about__paragraph">
-            Passionate Civil Engineer specializing in infrastructure design and BIM modeling.
-            I transform engineering requirements into coordinated, high-efficiency wet &amp; dry utility networks.
+            Infrastructure Design &amp; BIM Engineer specializing in utility network design,
+            Civil 3D modeling, BIM coordination, and construction-ready shop drawings.
           </p>
 
           <p className="about__paragraph1">
-            My engineering approach blends obsessive hydraulic precision with robust BIM architectural patterns.
-            I design systems that perform reliably under complex peak demands — from municipal water distribution
-            and gravity sewage networks to comprehensive stormwater and fire protection models using Revit, WaterCAD, and SewerCAD.
+            Experienced in multidisciplinary coordination, clash detection, hydraulic infrastructure
+            design, and developing detailed utility networks. Passionate about engineering automation
+            and AI-assisted workflows that improve design efficiency, accuracy, and coordination.
           </p>
         </div>
       </div>

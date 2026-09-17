@@ -32,21 +32,21 @@ export default function VideoShowcase() {
   const [activeIdx, setActiveIdx] = useState(0);
   const videoRef = useRef(null);
 
-  // Autoplay first video on mount
+  // Autoplay video on mount and whenever activeIdx changes
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.muted = true;
+      videoRef.current.defaultMuted = true;
+      const promise = videoRef.current.play();
+      if (promise !== undefined) {
+        promise.catch(() => {});
+      }
     }
-  }, []);
+  }, [activeIdx]);
 
   const handleSelect = (idx) => {
+    if (idx === activeIdx) return;
     setActiveIdx(idx);
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.load();
-        videoRef.current.play().catch(() => {});
-      }
-    }, 60);
   };
 
   const active = VIDEOS[activeIdx];
@@ -89,11 +89,14 @@ export default function VideoShowcase() {
             <video
               ref={videoRef}
               key={active.id}
+              src={active.src}
               className="vs-video"
               controls
+              autoPlay
+              muted
+              loop
               playsInline
               preload="auto"
-              muted
             >
               <source src={active.src} type="video/mp4" />
             </video>
